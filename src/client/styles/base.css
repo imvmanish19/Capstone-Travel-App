@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+}
+
+section.sub {
+    margin-top: 5px;
+    color: coral;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    background-color: lawngreen;
+    border-radius: 15px;
+    padding-top: 5px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 100px 50px auto auto;
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "s s s s s s s s s s s s"
+    "m m m m m m m m m m m m"
+    "q q q q q q q q q q q q";   
+}
+
+

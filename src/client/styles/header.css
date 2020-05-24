@@ -1,0 +1,15 @@
+header {
+    background-color: lightcoral;
+    text-align: center;
+    grid-area: h;
+}
+
+#title {
+    font-size: 3em;
+    color: lightgreen;
+}
+
+#subtitle {
+    font-size: 1.5em;
+    color: ghostwhite;
+}

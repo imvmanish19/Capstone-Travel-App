@@ -1,0 +1,14 @@
+section.results {
+    grid-area: q;
+}
+
+.result-box {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+
+
