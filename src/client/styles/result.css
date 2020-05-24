@@ -1,5 +1,6 @@
 section.results {
     grid-area: q;
+    margin-top: 15px;
 }
 
 .result-box {
@@ -8,6 +9,20 @@ section.results {
     overflow: hidden;
     margin-top: 20px;
 }
+
+.result-box-one {
+    background-color: deeppink;
+    font-size: bold;
+    color: black;
+}
+
+.result-box-two {
+    background-color: orange;
+    font-size: bold;
+    color: black;
+}
+
+
 
 
 
