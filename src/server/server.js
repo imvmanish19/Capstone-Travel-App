@@ -8,7 +8,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(express.static('src/client'));
+app.use(express.static('dist'));
 
 //Setting up middlewares
 
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req,res) => {
-    res.sendFile('index.html', { root: __dirname + '/..' +'/client/views'});
+    res.sendFile('index.html', {root: __dirname +'/../..'+'/dist'});
 });
 
 app.post('/', (req,res) => {
