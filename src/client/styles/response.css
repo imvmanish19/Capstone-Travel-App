@@ -1,0 +1,9 @@
+@media (min-width:1400px)
+{
+    .result-box {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+}
