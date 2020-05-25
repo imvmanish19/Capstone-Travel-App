@@ -8,7 +8,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(express.static('src'));
+app.use(express.static('src/client'));
 
 //Setting up middlewares
 
@@ -17,14 +17,14 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req,res) => {
-    res.sendFile('src/client/views/index.html');
+    res.sendFile('index.html', { root: __dirname + '/..' +'/client/views'});
 });
 
 app.post('/', (req,res) => {
     res.send('POST Request');
 });
 
-const port = 3000;
+const port = 3002;
 
 app.listen(port, () => {
     console.log('Server started listening at port '+ port)
