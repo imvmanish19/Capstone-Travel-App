@@ -15,6 +15,7 @@ section.results {
     font-size: bold;
     color: black;
     border-radius: 10px;
+    text-align: center;
 }
 
 .result-box-two {
@@ -22,6 +23,7 @@ section.results {
     font-size: bold;
     color: black;
     border-radius: 10px;
+    text-align: center;
 }
 
 .result-box-three {
@@ -29,9 +31,17 @@ section.results {
     font-size: bold;
     color: black;
     border-radius: 10px;
+    text-align: center;
 }
 
+.result-box-two h1 {
+    color: cornsilk;
+    font-size: 30px;
+}
 
+.result-box-two h1 span {
+    color: darkblue;
+}
 
 
 

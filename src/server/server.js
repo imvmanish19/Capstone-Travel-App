@@ -21,15 +21,16 @@ app.get('/', (req,res) => {
     res.sendFile('src/client/views/index.html');
 });
 
-app.post('/weather', (req,res) => {
-    const temperature = req.body.temp;
-    const summary = req.body.summary;
-    const data = {
-        temperature: temperature,
-        summary: summary
-    };
-    projectData = data;
-    res.send(projectData);
+app.post('/', (req,res) => {
+    // const temperature = req.body.temp;
+    // const summary = req.body.summary;
+    // const data = {
+    //     temperature: temperature,
+    //     summary: summary
+    // };
+    // projectData = data;
+    // res.send(projectData);
+    res.send('POST Request');
 });
 
 

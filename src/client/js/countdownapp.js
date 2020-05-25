@@ -38,7 +38,7 @@ function dateUI(trip,wait) {
     let element = document.querySelector('.final-one');
     let output = `
     <div id="count" style="padding:3px">
-    <h1 id="bigo" style="font-size:30px; color:white">Countdown</h1>
+    <h1 id="bigo" style="font-size:30px; color:white; margin-top:10px">Countdown</h1>
     <h2>Total Number Of Days Left For The Trip: <span style="color: lime">${wait}</span></h2>
     <h2>Total Trip Duration: <span style="color:blue;">${trip}</span></h2>
     </div>
@@ -47,8 +47,10 @@ function dateUI(trip,wait) {
 }
 
 function validText(place) {
+    let cityName = place.split(' ').join('');
+    console.log(cityName)
     let letters = /^[A-Za-z]+$/;
-    if(place.match(letters)){
+    if(cityName.match(letters)){
         return true;
     }
     else

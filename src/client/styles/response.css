@@ -5,5 +5,16 @@
         flex-direction: row;
         overflow: hidden;
         margin-top: 20px;
+        justify-content: space-around;
+    }
+
+    .result-box-two {
+        flex-grow: 2;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .result-box-three {
+        margin-left: 10px;
     }
 }
