@@ -1,4 +1,4 @@
-const place = document.getElementById('place').value;
+// const place = document.getElementById('place').value;
 
 function validText(place) {
     let letters = /^[A-Za-z]+$/;
@@ -10,3 +10,5 @@ function validText(place) {
         return false;
     }
 }
+
+module.exports = validText;
