@@ -3,7 +3,6 @@ dotenv.config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-let projectData = {};
 
 //Instantaiation of express class
 
@@ -22,15 +21,11 @@ app.get('/', (req,res) => {
 });
 
 app.post('/', (req,res) => {
-    // const temperature = req.body.temp;
-    // const summary = req.body.summary;
-    // const data = {
-    //     temperature: temperature,
-    //     summary: summary
-    // };
-    // projectData = data;
-    // res.send(projectData);
     res.send('POST Request');
 });
 
+const port = 3000;
 
+app.listen(port, () => {
+    console.log('Server started listening at port '+ port)
+});
