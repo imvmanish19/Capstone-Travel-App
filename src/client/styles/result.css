@@ -14,18 +14,21 @@ section.results {
     background-color: deeppink;
     font-size: bold;
     color: black;
+    border-radius: 10px;
 }
 
 .result-box-two {
     background-color: orange;
     font-size: bold;
     color: black;
+    border-radius: 10px;
 }
 
 .result-box-three {
     background-color: greenyellow;
     font-size: bold;
     color: black;
+    border-radius: 10px;
 }
 
 
