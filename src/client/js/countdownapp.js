@@ -1,10 +1,4 @@
-//Main function 
-const eventHandling = document.getElementById('mainform').addEventListener('submit', (event) => {
-    event.preventDefault();
-    handleEventFunction();
-});
-
-function handleEventFunction() {
+export function handleEventFunction() {
 
     let destiny = document.getElementById('place').value;
     let startDate = document.getElementById('date-of-departure').value;
@@ -24,7 +18,7 @@ function handleEventFunction() {
 }
 
 //Date Formatter (yyyy-mm-dd) to (mm/dd/yyyy)
-function dateFormatter(date1,date2) {
+export function dateFormatter(date1,date2) {
     let format1 = date1.split('-').map(Number);
     let format2 = date2.split('-').map(Number);
     let newDate1 = `${format1[1]}/${format1[2]}/${format1[0]}`;
@@ -34,7 +28,7 @@ function dateFormatter(date1,date2) {
 }
 
 //UI Update of Date
-function dateUI(trip,wait) {
+export function dateUI(trip,wait) {
     let element = document.querySelector('.final-one');
     let output = `
     <div id="count" style="padding:3px">
@@ -46,7 +40,7 @@ function dateUI(trip,wait) {
     element.innerHTML = output;
 }
 
-function validText(place) {
+export function validText(place) {
     let cityName = place.split(' ').join('');
     console.log(cityName)
     let letters = /^[A-Za-z]+$/;
@@ -59,7 +53,7 @@ function validText(place) {
     }
 }
 
-function dateDifference(d1,d2) {
+export function dateDifference(d1,d2) {
     //Getting dates
     let date1 = new Date(d1);
     let date2 = new Date(d2);

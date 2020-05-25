@@ -13,7 +13,7 @@ const pixabayKey = '16731537-9779fd1a1d5d3ac94e371b3f4';
 console.log(timestamp)
 //Get City Data
 
-const getCityData = (geoNamesURL, place, username) => {
+export const getCityData = (geoNamesURL, place, username) => {
     console.log(geoNamesURL + place + "&maxRows=10&" + "username=" + username)
     fetch(geoNamesURL + place + "&maxRows=10&" + "username=" + username)
     .then(res => res.json())
@@ -30,7 +30,7 @@ const getCityData = (geoNamesURL, place, username) => {
 
 //Weather API
 
-const getWeatherInfo = (cityLatitude, cityLongitude, country, timestamp) => {
+export const getWeatherInfo = (cityLatitude, cityLongitude, country, timestamp) => {
     const weatherGet = `${weatherAPIUrl}${weatherAPIKey}&lat=${cityLatitude}&lon=${cityLongitude}`;
     console.log(weatherGet);
     fetch(weatherGet)
@@ -48,7 +48,7 @@ const getWeatherInfo = (cityLatitude, cityLongitude, country, timestamp) => {
     });
 }
 
-function updateUI(data) {
+export function updateUI(data) {
     const uiElementTwo = document.querySelector('.final-two');
     const uiElementThree = document.querySelector('.final-three');
     let famousCity = document.getElementById('place').value;
@@ -73,7 +73,7 @@ function updateUI(data) {
         const imgElement = `
         <div style="padding:10px;">
         <h1 style="font-size:28px; color:white;">Image Of Your Destination</h1>
-        <img src=${data.hits[0].webformatURL} height="200" width="200">
+        <img src=${data.hits[0].webformatURL} height="200" width="200" style="border-radius:10px">
         <div>
         `;
         uiElementThree.innerHTML=imgElement;
@@ -85,7 +85,7 @@ document.getElementById('mainform').addEventListener('submit',(e) => {
     boxHandler();
 })
 
-function boxHandler() {
+export function boxHandler() {
     let city = document.getElementById('place').value;
     getCityData(geoNamesURL,city,geoUsername);
 }

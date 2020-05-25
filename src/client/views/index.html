@@ -6,11 +6,7 @@
         <title>Travel App</title>
         <meta name="description" content="A Travel App for users to plan their trip">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles/base.css">
-        <link rel="stylesheet" href="../styles/header.css">
-        <link rel="stylesheet" href="../styles/form.css">
-        <link rel="stylesheet" href="../styles/result.css">
-        <link rel="stylesheet" href="../styles/response.css">
+        <base href="/">
     </head>
     <body>
         <main>
@@ -45,9 +41,15 @@
                     </div>
                 </div>
             </section>
-            </section>
+            <script>
+                // Check that service workers are supported
+                if ('serviceWorker' in navigator) {
+                    // Use the window load event to keep the page load performant
+                    window.addEventListener('load', () => {
+                        navigator.serviceWorker.register('/service-worker.js');
+                    });
+                }
+            </script>
         </main>
-        <script type="module" src="../js/countdownapp.js" async defer></script>
-        <script src="../js/app.js" defer></script>
     </body>
 </html>
